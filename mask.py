@@ -61,15 +61,17 @@ def month_dict(month_pixels,pix_loc):
 def main(Year, Month, Day):
     month_pixels = {
             }        
+    path = 'C://Users/Dan/Documents/SpaceScienceAndTechnologyMasters/Project/Github/UCD_Masters_Project/'
     for d in Day:
         file = str(d) + str(Month) + str(Year) + '.jpg'
-        path = 'C://Users/Dan/Documents/SpaceScienceAndTechnologyMasters/Project/Data/UCD_Project/'
         filename = find(file,path)
-        try:
+        
+        #checks if the file exists, easy way to navigate the months having different days
+        if filename is None:
+            break
+        
+        if os.path.isfile(filename) is True:
             final_mask = mask(filename)
             pixels(final_mask,month_pixels)
-                    
-        except (OSError, KeyError) as e:
-            pass
                  
     return month_pixels
