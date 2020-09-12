@@ -22,10 +22,10 @@ def main():
     
     """
     
-    Month = ['Jan', 'March', 'April', 'May', 'June'] 
+    Month = ['Jan' , 'Feb' , 'March', 'April', 'May', 'June', 'July', 'August', 'Sept','October', 'Nov', 'Dec'] 
     #'Jan' , 'Feb' , 'March', 'April', 'May', 'June', 'July', 'August', 'Sept','October', 'Nov', 'Dec'
     
-    Year = ['2013'] # '2013','2014','2015','2016','2017','2018','2019'
+    Year = ['2014','2015','2016','2017','2018','2019'] # '2013','2014','2015','2016','2017','2018','2019'
     
     for y in Year:
         for m in Month:
